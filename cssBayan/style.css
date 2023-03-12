@@ -1,0 +1,100 @@
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.container:hover .options {
+    opacity: 1;
+}
+
+.container:hover h2 {
+    color: black;
+}
+
+.options {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    background-image: url(./assets/plus.png);
+    background-size: cover;
+    transition-property: opacity, transform;
+    transition-duration: .2s, .5s;
+}
+
+h1 {
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+    transition: all 0.5s ease;
+}
+
+
+
+h2 {
+    align-self: flex-start;
+    color: blue;
+    transition: color 1s;
+}
+
+input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+input:checked ~ .img {
+    height: 40vw;
+}
+
+input:checked ~ .options {
+    transform: rotate(45deg);
+}
+
+input:checked ~ h2 {
+    color: black;
+}
+
+.img {
+    width: 40vw;
+    height: 0px;
+    background-size: cover;
+    transition: all 1s;
+}
+
+.row:nth-child(2) > .img {
+    background-image: url(./assets/1.png);
+}
+.row:nth-child(3) > .img {
+    background-image: url(./assets/2.png);
+}
+.row:nth-child(4) > .img {
+    background-image: url(./assets/3.png);
+}
+.row:nth-child(5) > .img {
+    background-image: url(./assets/4.png);
+}
+.row:nth-child(6) > .img {
+    background-image: url(./assets/5.png);
+}
+
+@media (min-width: 600px) {
+    .row:hover .img {
+        height: 40vw;
+    }
+
+    .row:hover .options {
+        transform: rotate(45deg);
+    }
+}
