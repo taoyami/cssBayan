@@ -27,6 +27,7 @@
 h1 {
     border-bottom: 0.07em solid black;
     padding: 0.6em;
+    font-size: 3em;
 }
 .row {
     display: flex;
@@ -45,6 +46,7 @@ h2 {
     color: blue;
     transition: color 1s;
     text-transform: uppercase;
+    font-size: 3em;
 }
 
 input {
@@ -90,11 +92,36 @@ input:checked ~ h2 {
     background-image: url(./assets/5.jpg);
 }
 
-@media (min-width: 600px) {
+
+@media (min-width: 1300px) {
     .row:hover .img {
         height: 40vw;
     }
 
+    h2 {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .row:hover .options {
+        transform: rotate(45deg);
+    }
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+    .row:hover .img {
+        height: 40vw;
+    }
     .row:hover .options {
         transform: rotate(45deg);
     }
