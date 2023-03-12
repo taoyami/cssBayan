@@ -1,0 +1,128 @@
+.container {
+    margin: 0 auto;
+    max-width: 62.5em;
+}
+
+.container:hover .options {
+    opacity: 1;
+}
+
+.container:hover h2 {
+    color: black;
+}
+
+.options {
+    position: absolute;
+    top: 0.7em;
+    right: 0.7em;
+    width: 1.4em;
+    height: 1.4em;
+    opacity: 0;
+    background-image: url(./assets/plus.png);
+    background-size: cover;
+    transition-property: opacity, transform;
+    transition-duration: .2s, .5s;
+}
+
+h1 {
+    border-bottom: 0.07em solid black;
+    padding: 0.6em;
+    font-size: 3em;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding-bottom: 0.7em;
+    border-bottom: 0.1em solid black;
+    transition: all 0.5s ease;
+}
+
+
+
+h2 {
+    align-self: flex-start;
+    color: blue;
+    transition: color 1s;
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+input:checked ~ .img {
+    height: 40vw;
+}
+
+input:checked ~ .options {
+    transform: rotate(45deg);
+}
+
+input:checked ~ h2 {
+    color: black;
+}
+
+.img {
+    width: 40vw;
+    height: 0em;
+    background-size: cover;
+    transition: all 1s;
+}
+
+.row:nth-child(2) > .img {
+    background-image: url(./assets/1.jpg);
+}
+.row:nth-child(3) > .img {
+    background-image: url(./assets/2.jpg);
+}
+.row:nth-child(4) > .img {
+    background-image: url(./assets/3.jpg);
+}
+.row:nth-child(5) > .img {
+    background-image: url(./assets/4.jpg);
+}
+.row:nth-child(6) > .img {
+    background-image: url(./assets/5.jpg);
+}
+
+
+@media (min-width: 1300px) {
+    .row:hover .img {
+        height: 40vw;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .row:hover .options {
+        transform: rotate(45deg);
+    }
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+    .row:hover .img {
+        height: 40vw;
+    }
+    .row:hover .options {
+        transform: rotate(45deg);
+    }
+}
