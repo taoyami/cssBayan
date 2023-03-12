@@ -74,19 +74,19 @@ input:checked ~ h2 {
 }
 
 .row:nth-child(2) > .img {
-    background-image: url(./assets/1.png);
+    background-image: url(./assets/1.jpg);
 }
 .row:nth-child(3) > .img {
-    background-image: url(./assets/2.png);
+    background-image: url(./assets/2.jpg);
 }
 .row:nth-child(4) > .img {
-    background-image: url(./assets/3.png);
+    background-image: url(./assets/3.jpg);
 }
 .row:nth-child(5) > .img {
-    background-image: url(./assets/4.png);
+    background-image: url(./assets/4.jpg);
 }
 .row:nth-child(6) > .img {
-    background-image: url(./assets/5.png);
+    background-image: url(./assets/5.jpg);
 }
 
 @media (min-width: 600px) {
